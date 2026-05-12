@@ -38,7 +38,7 @@ print(is_strong("mydfgrtyuh"))
 def apply_interest(balance,rate,years):
     if rate < 0 and year < 1:
         raise ValueError("This is invalid input")
-    interest = blance(1 +rate)**years
+    interest = balance * (1 +rate)**years
     return interest
 
 print(apply_interest(5000,123,1))
@@ -50,10 +50,10 @@ def get_transaction_summary(transactions):
     for transaction in transactions:
         if transaction[0] == "credit":
             total_credits += transaction[1]
-         if transaction[0] == "debit":
+        if transaction[0] == "debit":
             total_debits += transaction[1]
     net_balance = total_credits - total_debits
-    transaction_count = len(transactiona)
+    transaction_count = len(transactions)
     output = [["total_credits", total_credits],["total_debits", total_debits],["net_balance",net_balance], ["transaction_count",transaction_count]]
     return output
 
