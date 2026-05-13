@@ -36,7 +36,7 @@ def is_strong(password):
 print(is_strong("mydfgrtyuh"))
 
 def apply_interest(balance,rate,years):
-    if rate < 0 and year < 1:
+    if rate < 0 and years < 1:
         raise ValueError("This is invalid input")
     interest = balance * (1 +rate)**years
     return interest
